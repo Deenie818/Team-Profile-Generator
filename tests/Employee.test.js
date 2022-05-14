@@ -1,10 +1,10 @@
-
+//parent class
 const Employee = require ('../lib/employee.js');
-const employee = new Employee('Sam', 1, 'sam@gmail.com');
+const employee = new Employee('Sam', '1', 'sam@gmail.com');
 
 test('creates an employee object', () => {
     expect(employee.name).toBe('Sam');
-    expect(employee.id).toBe(1);
+    expect(employee.id).toBe('1');
     expect(employee.email).toBe('sam@gmail.com');
 
 });
@@ -14,7 +14,7 @@ test('tests to getName() method', () => {
 })
 
 test('tests to getID() method', () => {
-    expect(employee.id).toBe(1);
+    expect(employee.id).toBe('1');
 
 })
 
