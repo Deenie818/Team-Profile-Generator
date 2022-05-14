@@ -1,3 +1,11 @@
+// In addition to Employee's properties and methods, Manager will also have:
+
+// officeNumber
+
+// getRole() // Overridden to return 'Manager'
+
+
+
 const Manager = require ('../lib/Manager.js');
 const manager = new Manager('Sam', '1', 'sam@gmail.com', '304');
 

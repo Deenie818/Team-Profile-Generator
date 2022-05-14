@@ -1,4 +1,18 @@
-//parent class
+// The first class is an Employee parent class with the following properties and methods:
+
+// name
+
+// id
+
+// email
+
+// getName()
+
+// getId()
+
+// getEmail()
+
+// getRole() // Returns 'Employee'
 const Employee = require ('../lib/Employee.js');
 const employee = new Employee('Sam', '1', 'sam@gmail.com');
 
