@@ -1,5 +1,5 @@
 //parent class
-const Employee = require ('../lib/employee.js');
+const Employee = require ('../lib/Employee.js');
 const employee = new Employee('Sam', '1', 'sam@gmail.com');
 
 test('creates an employee object', () => {
