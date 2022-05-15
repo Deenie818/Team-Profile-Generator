@@ -38,19 +38,12 @@ const compileTeamMember = () => {
             if (answers.compileTeamMember === true) {
                 question1();
             } else {
-                // console.log(managers, engineers, interns);
-                
-        // deleteHtml();
-                // topHtmlFile();
-                // managerGenerator();
-                // engineerGenerator();
-                // internGenerator();
-                // bottomHtmlFile();
+        
                 var finishHtml=generateHtml(managers, engineers, interns);
                 fs.writeFile("./dist/index.html", finishHtml, function(err){
                     if(err) throw err
                 });
-                console.log("Employee added");
+                console.log("Employee successfully added!");
             }
         });
 
