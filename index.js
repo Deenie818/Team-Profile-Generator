@@ -11,6 +11,9 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+//generate team html
+const generateHtml= require('./src/generateHtml.js');
+
 //require team info
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
@@ -35,17 +38,19 @@ const compileTeamMember = () => {
             if (answers.compileTeamMember === true) {
                 question1();
             } else {
-                console.log(managers, engineers, interns);
-                module.exports = managers;
-                module.exports = engineers;
-                module.exports = interns;
-                deleteHtml();
-                topHtmlFile();
-                managerGenerator();
-                engineerGenerator();
-                internGenerator();
-                bottomHtmlFile();
-                return answers;
+                // console.log(managers, engineers, interns);
+                
+        // deleteHtml();
+                // topHtmlFile();
+                // managerGenerator();
+                // engineerGenerator();
+                // internGenerator();
+                // bottomHtmlFile();
+                var finishHtml=generateHtml(managers, engineers, interns);
+                fs.writeFile("./dist/index.html", finishHtml, function(err){
+                    if(err) throw err
+                });
+                console.log("Employee added");
             }
         });
 
